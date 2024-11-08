@@ -1,5 +1,17 @@
 body {
   background-color: rgba(124, 165, 240, 0.514);
+  font-family: "Tiny5", sans-serif;
+}
+.search-box {
+  border-color: rgba(124, 165, 240, 0.514);
+  background-color: rgba(250, 252, 255, 0.699);
+  font-family: "Tiny5", sans-serif;
+  padding-right: 0;
+}
+.search-button {
+  border-color: rgba(250, 252, 255, 0.699);
+  background-color: rgba(124, 165, 240, 0.514);
+  font-family: "Tiny5", sans-serif;
 }
 .time {
   color: aliceblue;
@@ -20,6 +32,7 @@ h3 {
 }
 footer {
   text-align: center;
+  font-size: smaller;
   margin: 15px auto;
   color: rgba(250, 252, 255, 0.849);
 }
