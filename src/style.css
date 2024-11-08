@@ -1,3 +1,25 @@
-h1 {
-  color: blueviolet;
+body {
+  background-color: rgba(124, 165, 240, 0.514);
+}
+.time {
+  color: aliceblue;
+  float: right;
+}
+main {
+  text-align: center;
+}
+h1,
+h2,
+.emoji {
+  color: aliceblue;
+  font-size: 50px;
+}
+h3 {
+  background-color: rgba(250, 252, 255, 0.699);
+  margin: 0 auto;
+}
+footer {
+  text-align: center;
+  margin: 15px auto;
+  color: rgba(250, 252, 255, 0.849);
 }
