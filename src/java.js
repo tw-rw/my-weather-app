@@ -3,7 +3,20 @@ function showcity(event) {
   let cityElement = document.querySelector(".search-box");
   let city = document.querySelector("h2");
   city.innerHTML = cityElement.value;
+  api(cityElement.value);
 }
-
 let searchForm = document.querySelector(".search-form");
 searchForm.addEventListener("submit", showcity);
+
+function api(city) {
+  let key = "44f7a844ccaae8fbao1218t90975e873";
+  let url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${key}&units=metric`;
+
+  axios.get(url).then(tempChange);
+}
+
+function tempChange(response) {
+  let tempElement = document.querySelector("#temprature");
+  let temp = response.data.temperature.current;
+  tempElement.innerHTML = Math.round(temp);
+}
