@@ -29,3 +29,19 @@ function tempChange(response) {
   let wind = response.data.wind.speed;
   windElement.innerHTML = wind;
 }
+
+let now = new Date();
+let min = now.getMinutes();
+let hr = now.getHours();
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+let day = days[now.getDay()];
+let time = document.querySelector(".time");
+time.innerHTML = `${day} ${hr}:${min}`;
