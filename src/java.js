@@ -28,6 +28,10 @@ function tempChange(response) {
   let windElement = document.querySelector("#Wind");
   let wind = response.data.wind.speed;
   windElement.innerHTML = wind;
+
+  let emojiElement = document.querySelector(".emoji");
+  let emoji = `<img src="${response.data.condition.icon_url}">`;
+  emojiElement.innerHTML = emoji;
 }
 
 let now = new Date();
