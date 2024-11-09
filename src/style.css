@@ -37,6 +37,7 @@ h2 {
 h3 {
   background-color: rgba(250, 252, 255, 0.699);
   margin: 0 auto;
+  padding: 8px;
 }
 a {
   color: blue;
