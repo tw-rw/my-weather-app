@@ -19,4 +19,13 @@ function tempChange(response) {
   let tempElement = document.querySelector("#temprature");
   let temp = response.data.temperature.current;
   tempElement.innerHTML = Math.round(temp);
+  let descElement = document.querySelector("#description");
+  let desc = response.data.condition.description;
+  descElement.innerHTML = desc;
+  let humidElement = document.querySelector("#Humidity");
+  let humidity = response.data.temperature.humidity;
+  humidElement.innerHTML = humidity;
+  let windElement = document.querySelector("#Wind");
+  let wind = response.data.wind.speed;
+  windElement.innerHTML = wind;
 }
