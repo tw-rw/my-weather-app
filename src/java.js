@@ -49,3 +49,5 @@ let days = [
 let day = days[now.getDay()];
 let time = document.querySelector(".time");
 time.innerHTML = `${day} ${hr}:${min}`;
+
+api("tehran");
