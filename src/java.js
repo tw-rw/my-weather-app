@@ -32,6 +32,8 @@ function tempChange(response) {
   let emojiElement = document.querySelector(".emoji");
   let emoji = `<img src="${response.data.condition.icon_url}">`;
   emojiElement.innerHTML = emoji;
+
+  getForecast(response.data.city);
 }
 
 let now = new Date();
@@ -50,9 +52,15 @@ let day = days[now.getDay()];
 let time = document.querySelector(".time");
 time.innerHTML = `${day} ${hr}:${min}`;
 
-api("tehran");
+function getForecast(city) {
+  let key = "44f7a844ccaae8fbao1218t90975e873";
+  let api = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${key}&units=metric`;
+  axios.get(api).then(forecastShow);
+}
 
-function forecastShow() {
+function forecastShow(response) {
+  console.log(response.data);
+
   let forecast = document.querySelector(".forecast");
   let days = ["fri", "sat", "sun", "mon", "tue"];
   forecastElement = "";
@@ -69,4 +77,3 @@ function forecastShow() {
   forecast.innerHTML = forecastElement;
 }
 
-forecastShow();
