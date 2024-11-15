@@ -51,3 +51,22 @@ let time = document.querySelector(".time");
 time.innerHTML = `${day} ${hr}:${min}`;
 
 api("tehran");
+
+function forecastShow() {
+  let forecast = document.querySelector(".forecast");
+  let days = ["fri", "sat", "sun", "mon", "tue"];
+  forecastElement = "";
+  days.forEach(function (day) {
+    forecastElement += `<div class="forecast-each">
+      <div class="forecast-day">${day}</div>
+      <div class="forecast-icon">☁</div>
+      <div class="forecast-temps">
+        <div class="temp-max">19°</div>
+        <div class="temp-min">15°</div>
+      </div>
+      </div>`;
+  });
+  forecast.innerHTML = forecastElement;
+}
+
+forecastShow();

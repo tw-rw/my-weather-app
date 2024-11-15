@@ -46,6 +46,35 @@ h3 {
   margin: 0 auto;
   padding: 8px;
 }
+.forecast {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.forecast-each {
+  border-style: solid;
+  border-radius: 10px;
+  border-color: aliceblue;
+  padding: 30px 0;
+  margin: 10px;
+  background-color: rgba(250, 252, 255, 0.247);
+}
+.forecast-day {
+  font-size: 18px;
+  text-align: center;
+}
+.forecast-icon {
+  text-align: center;
+}
+.forecast-temps {
+  display: flex;
+  justify-content: center;
+  color: rgb(124, 165, 240);
+}
+.temp-max,
+.temp-min {
+  padding: 0 8px;
+}
 a {
   color: blue;
 }
