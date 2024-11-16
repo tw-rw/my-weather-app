@@ -59,21 +59,19 @@ function getForecast(city) {
 }
 
 function forecastShow(response) {
-  console.log(response.data);
-
-  let forecast = document.querySelector(".forecast");
-  let days = ["fri", "sat", "sun", "mon", "tue"];
   forecastElement = "";
-  days.forEach(function (day) {
+  response.data.daily.forEach(function (day, index) {
     forecastElement += `<div class="forecast-each">
       <div class="forecast-day">${day}</div>
-      <div class="forecast-icon">☁</div>
+      <div class="forecast-icon"> <img src="${day.condition.icon_url}" /> </div>
       <div class="forecast-temps">
-        <div class="temp-max">19°</div>
-        <div class="temp-min">15°</div>
+        <div class="temp-max">${math.round(day.temperature.maximum)}°</div>
+        <div class="temp-min">${math.round(day.temperature.minimum)}°</div>
       </div>
       </div>`;
   });
+  let forecast = document.querySelector(".forecast");
   forecast.innerHTML = forecastElement;
 }
 
+api("tehran");
